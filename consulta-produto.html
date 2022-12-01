@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="mostrarProdutos()">
+    <h1>Consulta de produtos</h1>
+    <table id="tabelaProdutos">
+        <tr>
+            <th>código de barras</th>
+            <th>nome</th>
+            <th>tipo</th>
+            <th>quantidade</th>
+        </tr>
+    </table>
+    <button id="atualizar" class="consulta-btn">atualizar produto</button>
+    <form action="update" method="post" style="display:none" id="formAtualizar">
+        <input type="text" name="cod" id="cod" placeholder="código de barras">
+        <input type="text" name="nomeProduto" id="nomeProdutoConsulta" placeholder="nome">
+        <input type="text" name="tipo" id="tipo" placeholder="tipo">
+        <input type="number" name="quantidade" id="quantidadeConsulta" placeholder="quantidade">
+        <input type="submit" value="Atualizar">
+    </form>
+    <button id="deletar" class="consulta-btn">deletar produto</button>
+    <form action="delete" method="post" style="display:none" id="formDeletar">
+        <input type="text" name="cod" id="cod" placeholder="código de barras">
+        <input type="submit" value="Deletar">
+    </form>
+</body>
+</html>
